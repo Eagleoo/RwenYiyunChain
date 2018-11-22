@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backDialogIv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/payPassModuleLl"
+            android:padding="10dp"
+            android:src="@mipmap/arrow" />
+
+        <LinearLayout
+            android:id="@+id/payPassModuleLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:orientation="vertical"
+           >
+
+
+            <com.yda.yiyunchain.widget.PwdKeyboardView
+                android:id="@+id/key_board"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#919191"
+                android:keepScreenOn="true"
+                android:keyBackground="@drawable/selector_key_board"
+                android:keyTextColor="@android:color/black"
+                android:keyTextSize="26sp"
+                android:shadowRadius="0" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/payPassModuleLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:orientation="vertical"
+           >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="请输入交易密码"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/backDialogIv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:padding="10dp"
+                    android:src="@mipmap/arrow" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <!--<com.jungly.gridpasswordview.GridPasswordView-->
+                <!--android:id="@+id/payPassEt"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                <!--android:layout_marginRight="@dimen/activity_horizontal_margin"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:background="@drawable/et_border_line" />-->
+
+            <com.yda.yiyunchain.widget.PwdEditText
+                android:id="@+id/et_input"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:pwdCount="6"
+                app:style="roundRectangle"
+                android:layout_marginBottom="@dimen/_30dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="易云链安全键盘"
+                    android:drawableLeft="@drawable/ic_security_black_24dp"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:id="@+id/forget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:text="忘记密码？"
+                    android:textColor="@color/text_color"/>
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#919191" />
+
+            <com.yda.yiyunchain.widget.PwdKeyboardView
+                android:id="@+id/key_board"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#919191"
+                android:keepScreenOn="true"
+                android:keyBackground="@drawable/selector_key_board"
+                android:keyTextColor="@android:color/black"
+                android:keyTextSize="26sp"
+                android:shadowRadius="0" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
